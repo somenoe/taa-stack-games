@@ -3,5 +3,11 @@ import Page from "../layouts/Page.astro";
 ---
 
 <Page title="Home">
-  <h1 class="text-3xl text-red-500 text-center">Home</h1>
+  <h1
+    x-data="{ message: 'Hello World' }"
+    x-text="message"
+    @click="message = 'You clicked me!'"
+    class="text-3xl text-red-500 text-center"
+  >
+  </h1>
 </Page>
